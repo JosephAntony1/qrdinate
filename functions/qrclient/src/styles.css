@@ -1,45 +1,53 @@
+:root {
+  --primary: #4db6ac;
+  --secondary: #401f3e;
+  --neutral: #333232;
+  --accent: #d7263d;
+  --bright: #d4e4bc;
+}
+
 .primary {
-  color: #4db6ac;
+  color: var(--primary);
 }
 
 .secondary {
-  color: #401f3e;
+  color: var(--secondary);
 }
 
 .neutral {
-  color: #333232;
+  color: var(--neutral);
 }
 
 .bright {
-  color: #d4e4bc;
+  color: var(--bright);
 }
 
 .accent {
-  color: #d7263d;
+  color: var(--accent);
 }
 
 .primary-bg {
-  background-color: #4db6ac;
+  background-color: var(--primary);
 }
 
 .secondary-bg {
-  background-color: #401f3e;
+  background-color: var(--secondary);
 }
 
 .neutral-bg {
-  background-color: #333232;
+  background-color: var(--neutral);
 }
 
 .bright-bg {
-  background-color: #d4e4bc;
+  background-color: var(--bright);
 }
 
 .accent-bg {
-  background-color: #d7263d;
+  background-color: var(--accent);
 }
 
 .btn-floating {
-  background-color: #401f3e;
+  background-color: var(--secondary);
 }
 
 .btn-floating:hover {
