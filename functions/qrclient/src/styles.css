@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+.primary {
+  color: #4db6ac;
+}
+
+.secondary {
+  color: #401f3e;
+}
+
+.neutral {
+  color: #333232;
+}
+
+.bright {
+  color: #d4e4bc;
+}
+
+.accent {
+  color: #d7263d;
+}
+
+.primary-bg {
+  background-color: #4db6ac;
+}
+
+.secondary-bg {
+  background-color: #401f3e;
+}
+
+.neutral-bg {
+  background-color: #333232;
+}
+
+.bright-bg {
+  background-color: #d4e4bc;
+}
+
+.accent-bg {
+  background-color: #d7263d;
+}
+
+.btn-floating {
+  background-color: #401f3e;
+}
+
+.btn-floating:hover {
+  background-color: #876284;
+}
