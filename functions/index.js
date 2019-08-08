@@ -1,7 +1,6 @@
 const functions = require("firebase-functions");
 const express = require("express");
-// Create and Deploy Your First Cloud Functions
-// https://firebase.google.com/docs/functions/write-firebase-functions
+
 const _app_folder = './qrclient/dist';
 
 const app = express();
