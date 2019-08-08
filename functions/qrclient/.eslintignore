@@ -1,0 +1,7 @@
+node_modules/*
+qrclient/node_modules/*
+
+functions/node_modules/*
+functions/qrclient/node_modules/*
+
+qrclient/node_modules/*

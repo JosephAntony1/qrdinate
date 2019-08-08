@@ -1,0 +1,3 @@
+node_modules/*
+qrclient/node_modules/*
+qrclient/dist/*

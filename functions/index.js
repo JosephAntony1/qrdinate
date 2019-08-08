@@ -6,7 +6,7 @@ const _app_folder = './qrclient/dist';
 
 const app = express();
 
-app.get('*', express.static('./qrclient/dist', {maxAge: '1y'}));
+app.get('*', express.static(_app_folder, {maxAge: '1y'}));
 
 app.all('*', function (req, res) {
     res.status(200).sendFile(`/`, {root:  _app_folder});

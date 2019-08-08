@@ -1,3 +1,3 @@
-firebase serve --only functions,hosting to see locally
+firebase serve --only functions,hosting 
 
 firebase deploy
