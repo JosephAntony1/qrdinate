@@ -1,9 +1,9 @@
 :root {
-  --primary: 	#002A38;
+  --primary: #002a38;
   --secondary: #065559;
   --neutral: #333232;
   --accent: #d7263d;
-  --bright: #c7baa1;/*#d4e4bc;*/
+  --bright: #c7baa1; /*#d4e4bc;*/
 }
 
 .primary {
@@ -50,7 +50,7 @@
   background-color: var(--secondary);
 }
 
-.btn-floating i{
+.btn-floating i {
   color: var(--bright);
 }
 
@@ -65,8 +65,8 @@
 
 /* label underline focus color */
 .input-field input[type="text"]:focus {
-  border-bottom: 1px solid var(--bright);
-  box-shadow: 0 1px 0 0 var(--bright);
+  border-bottom: 1px solid var(--secondary);
+  box-shadow: 0 1px 0 0 var(--secondary);
 }
 
 /* label underline color */
