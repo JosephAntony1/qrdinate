@@ -3,7 +3,7 @@
   --secondary: #401f3e;
   --neutral: #333232;
   --accent: #d7263d;
-  --bright: #d4e4bc;
+  --bright: white;/*#d4e4bc;*/
 }
 
 .primary {

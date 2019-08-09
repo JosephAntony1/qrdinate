@@ -1,1 +1,1 @@
-cd ng build --prod && firebase deploy 
+ng build --prod && firebase deploy 
