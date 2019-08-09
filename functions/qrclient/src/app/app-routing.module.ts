@@ -1,8 +1,13 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import Homepage from "./hompage/compage.component";
-import EventInfo from "./event-info/event-info.component";
-const routes: Routes = [{ path: "home", component: Homepage},  {path: 'event-info' , component: EventInfo} ];
+import { HomepageComponent } from './homepage/homepage.component';
+import { EventInfoComponent } from './event-info/event-info.component';
+
+const routes: Routes = [
+  { path: "home", component: HomepageComponent },
+  { path: "event-info", component: EventInfoComponent },
+  { path: "", redirectTo: "/home", pathMatch: "full" }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
