@@ -1,16 +1,18 @@
 <div class="bg center-align">
   <div
-    class="  valign-wrapper "
-    style="margin-top:10em; display:inline-block; width: 70vw"
+    class="card-panel secondary-bg center"
+    style="margin-top:8em; display:inline-block; width: 70vw"
   >
-    <a
-      [routerLink]="'/home'"
-      class="btn-floating btn-large pulse button left m1 "
-      style="display: inline-block; margin-right: 2em"
-      ><i class="material-icons bright">arrow_back </i>
-    </a>
-    <h1 *ngIf="eventId; else elseBlock" class="bright">You entered: {{ eventId }}!</h1>
-    <ng-template #elseBlock><h1 class="bright">No Event ID!</h1></ng-template>
-
+    <div class="valign-wrapper">
+      <a
+        [routerLink]="'/home'"
+        class="primary-bg btn-floating btn-large pulse button left m1"
+        ><i class="material-icons bright ">arrow_back </i>
+      </a>
+      <div class="center-block">
+        <h1 *ngIf="eventId; else noId" class="bright">Event: {{ eventId }}!</h1>
+        <ng-template #noId><h1 class="bright">No Event ID!</h1></ng-template>
+      </div>
+    </div>
   </div>
 </div>

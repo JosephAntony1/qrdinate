@@ -5,6 +5,17 @@
   --accent: #d7263d;
   --bright: #ffd395;
 }
+.btn-floating {
+  background-color: var(--secondary);
+}
+
+.btn-floating i {
+  color: var(--bright);
+}
+
+.btn-floating:hover {
+  background-color: #876284;
+}
 
 .primary {
   color: var(--primary);
@@ -46,18 +57,6 @@
   background-color: var(--accent);
 }
 
-.btn-floating {
-  background-color: var(--secondary);
-}
-
-.btn-floating i {
-  color: var(--bright);
-}
-
-.btn-floating:hover {
-  background-color: #876284;
-}
-
 /* label color */
 .input-field label {
   color: var(--bright);
@@ -80,6 +79,6 @@
   color: #00695c;
 }
 
-h1{
+h1 {
   margin: 0;
 }
