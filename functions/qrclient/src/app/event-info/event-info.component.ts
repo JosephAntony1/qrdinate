@@ -7,14 +7,13 @@ import {ActivatedRoute} from "@angular/router"
   styleUrls: ["./event-info.component.css"]
 })
 export class EventInfoComponent implements OnInit {
-  private eventId: string;
+  eventId: number;
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.eventId = params["eventId"]; 
-
+      this.eventId = params["eventId"];
     });
   }
 }

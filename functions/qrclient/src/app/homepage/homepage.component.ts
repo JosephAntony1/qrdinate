@@ -11,7 +11,6 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {}
 
   submitEventID(eventId: string) {
-    console.log(eventId);
     this.router.navigate(["/event-info", { eventId: eventId }]);
   }
 }
