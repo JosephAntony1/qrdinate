@@ -11,7 +11,8 @@
   <div class="row center-align valign-wrapper" style="margin-top:7em">
     <div class="col m3 offset-m4 s3 offset-s4 input-field">
       <input
-        id="eventId"
+        #eventId
+        (keyup.enter)="submitEventID(eventId.value)"
         class="bright"
         type="text"
         name="eventId"
@@ -19,12 +20,12 @@
       />
       <label class="bright" for="eventId">Event ID</label>
     </div>
-    <a
-      [routerLink]="'/event-info'"
-      [state]="'{ data: {...}}'"
+    <div
+      (click)="submitEventID(eventId.value)"
       class="btn-floating btn-large pulse button left m1 "
       style="display: inline-block; margin-left: 2.5em"
-      ><i class="material-icons bright">send</i>
-    </a>
+    >
+      <i class="material-icons bright">send</i>
+    </div>
   </div>
 </div>
