@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'event-info',
-  templateUrl: './event-info.component.html',
-  styleUrls: ['./event-info.component.css']
+  selector: "event-info",
+  templateUrl: "./event-info.component.html",
+  styleUrls: ["./event-info.component.css"]
 })
 export class EventInfoComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
