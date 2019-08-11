@@ -10,7 +10,7 @@
 }
 
 .btn-floating i {
-  color: var(--bright);
+  color: var(--primary);
 }
 
 .btn-floating:hover {
@@ -59,7 +59,7 @@
 
 /* label color */
 .input-field label {
-  color: var(--bright);
+  color: var(--primary);
 }
 
 /* label underline focus color */
@@ -70,8 +70,8 @@
 
 /* label underline color */
 .input-field input[type="text"] {
-  border-bottom: 1px solid var(--bright);
-  box-shadow: 0 1px 0 0 var(--bright);
+  border-bottom: 1px solid var(--primary);
+  box-shadow: 0 1px 0 0 var(--primary);
 }
 
 /* label focus color */
