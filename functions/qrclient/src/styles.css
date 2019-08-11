@@ -1,12 +1,11 @@
 :root {
-  --primary: #ffffff;
+  --primary: #a255a4;
+  --background: #ffffff;
   --secondary: #000000;
-  --neutral: #333232;
-  --accent: #d7263d;
-  --bright: #ffc15e;
+  --accent: #507dbc;
 }
 .btn-floating {
-  background-color: var(--secondary);
+  background-color: var(--background);
 }
 
 .btn-floating i {
@@ -25,12 +24,12 @@
   color: var(--secondary);
 }
 
-.neutral {
-  color: var(--neutral);
+.background {
+  color: var(--background);
 }
 
-.bright {
-  color: var(--bright);
+.neutral {
+  color: var(--neutral);
 }
 
 .accent {
@@ -41,16 +40,11 @@
   background-color: var(--primary);
 }
 
+.background-bg {
+  background-color: var(--background);
+}
 .secondary-bg {
   background-color: var(--secondary);
-}
-
-.neutral-bg {
-  background-color: var(--neutral);
-}
-
-.bright-bg {
-  background-color: var(--bright);
 }
 
 .accent-bg {
@@ -64,8 +58,8 @@
 
 /* label underline focus color */
 .input-field input[type="text"]:focus {
-  border-bottom: 1px solid var(--secondary);
-  box-shadow: 0 1px 0 0 var(--secondary);
+  border-bottom: 1px solid var(--background);
+  box-shadow: 0 1px 0 0 var(--background);
 }
 
 /* label underline color */
@@ -76,7 +70,7 @@
 
 /* label focus color */
 .input-field input[type="text"]:focus + label {
-  color: var(--secondary);
+  color: var(--background);
 }
 
 h1 {

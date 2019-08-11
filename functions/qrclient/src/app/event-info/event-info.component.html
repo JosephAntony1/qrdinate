@@ -1,13 +1,13 @@
 <div class="bg center-align">
   <div
-    class="card-panel secondary-bg center"
+    class="card-panel background-bg center"
     style="margin-top:8em; display:inline-block; width: 70vw"
   >
     <div class="valign-wrapper">
       <a
         [routerLink]="'/home'"
-        class="primary-bg btn-floating btn-large pulse button left m1"
-        ><i class="material-icons bright ">arrow_back </i>
+        class="btn-floating btn-large pulse button left m1 "
+        ><i class="material-icons ">arrow_back </i>
       </a>
       <div class="center-block">
         <h1 *ngIf="eventId; else noId" class="bright">Event: {{ eventId }}!</h1>
