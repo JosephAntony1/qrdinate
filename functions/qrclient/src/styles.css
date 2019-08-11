@@ -1,9 +1,9 @@
 :root {
-  --primary: #002a38;
-  --secondary: #065559;
+  --primary: #ffffff;
+  --secondary: #000000;
   --neutral: #333232;
   --accent: #d7263d;
-  --bright: #ffd395;
+  --bright: #ffc15e;
 }
 .btn-floating {
   background-color: var(--secondary);
@@ -76,7 +76,7 @@
 
 /* label focus color */
 .input-field input[type="text"]:focus + label {
-  color: #00695c;
+  color: var(--secondary);
 }
 
 h1 {

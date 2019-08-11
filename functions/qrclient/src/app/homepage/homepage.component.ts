@@ -6,7 +6,11 @@ import { Router } from "@angular/router";
   styleUrls: ["./homepage.component.css"]
 })
 export class HomepageComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    $(document).ready(function() {
+      $(".parallax").parallax();
+    });
+  }
 
   ngOnInit() {}
 
