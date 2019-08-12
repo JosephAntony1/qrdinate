@@ -16,9 +16,8 @@ admin.initializeApp({
 
 // As an admin, the app has access to read and write all data, regardless of Security Rules
 var db = admin.database();
-var ref = db.ref("qrdinate");
-var usersRef = ref.child("events");
-usersRef.set(
+var ref = db.ref("events");
+ref.set(
   {
     alanisawesome: {
       date_of_birth: "June 23, 1912",
