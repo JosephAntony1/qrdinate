@@ -23,15 +23,10 @@ var db = admin.database();
 var ref = db.ref("events");
 
 console.log("Logger loaded");
-ref.set({ id: "what isn't up" });
 
 app.post("/event/add", (req, res) => {
   res.json({ requestBody: req.body });
-  ref.set(req.body);
-});
-
-router.route("/event/add").get((req, res) => {
-  console.log("REQ-get" + req);
+  ref.child(req.body["id"]).set(req.body["details"]);
 });
 
 app.get("*", express.static(_app_folder, { maxAge: "1y" }));

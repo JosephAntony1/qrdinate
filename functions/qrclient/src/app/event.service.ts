@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class EventService {
   //uri = "http://localhost:5000";
-  uri = "https://qrdinate.firebaseio.com/";
+  uri = "https://qrdinate.firebaseapp.com";
   constructor(private http: HttpClient) {}
 
   addEvent(title, location, date, hostName, id) {
