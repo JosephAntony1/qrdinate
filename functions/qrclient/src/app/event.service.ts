@@ -11,7 +11,7 @@ export class EventService {
   addEvent(title, location, date, hostName, id) {
     let event = {
       id: id,
-      info: {
+      details: {
         title: title,
         location: location,
         date: date,
