@@ -7,6 +7,8 @@ const _app_folder = "./qrclient/dist";
 var serviceAccount = require("./qrdinate-firebase-adminsdk-b3vs7-fbc44634f8.json");
 
 const app = express();
+app.use(express.json()); // <==== parse request body as JSON
+
 var admin = require("firebase-admin");
 const router = express.Router();
 
@@ -21,11 +23,11 @@ var db = admin.database();
 var ref = db.ref("events");
 
 console.log("Logger loaded");
+ref.set({ id: "what isn't up" });
 
-router.route("/event/add").post((req, res) => {
-  console.log("REQ" + req);
-  res.send('hello world');
-  ref.set({id: "cry"} );
+app.post("/event/add", (req, res) => {
+  res.json({ requestBody: req.body });
+  ref.set(req.body);
 });
 
 router.route("/event/add").get((req, res) => {
