@@ -22,11 +22,16 @@ admin.initializeApp({
 var db = admin.database();
 var ref = db.ref("events");
 
-console.log("Logger loaded");
-
 app.post("/event/add", (req, res) => {
   res.json({ requestBody: req.body });
   ref.child(req.body["id"]).set(req.body["details"]);
+});
+
+app.get("/event-info", (req, res) => {
+  ref = db.ref("events/" + req.query.id);
+  ref.on("value", snapshot => {
+    res.json(snapshot);
+  });
 });
 
 app.get("*", express.static(_app_folder, { maxAge: "1y" }));

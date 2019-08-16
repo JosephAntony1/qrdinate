@@ -13,11 +13,18 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {}
 
   submitEventID(eventId: string) {
-    this.addEventHandler("hello", "yes", "this", "isdog", eventId);
-    this.router.navigate(["/event-info", { eventId: eventId }]);
+    this.getEventHandler(eventId);
   }
 
   addEventHandler(title, location, date, hostName, eventId) {
-    console.log(this.eventService.addEvent(title, location, date, hostName, eventId));
+    console.log(
+      this.eventService.addEvent(title, location, date, hostName, eventId)
+    );
+  }
+
+  getEventHandler(id) {
+    let info = this.eventService.getEvent(id);
+    console.log("Info" + JSON.stringify(info));
+    this.router.navigate(["/event-info", { eventInfo: info }]);
   }
 }

@@ -9,10 +9,19 @@
         class="btn-floating btn-large pulse button left m1 "
         ><i class="material-icons ">arrow_back </i>
       </a>
-      <div class="center-block">
-        <h1 *ngIf="eventId; else noId" class="bright">Event: {{ eventId }}!</h1>
-        <ng-template #noId><h1 class="bright">No Event ID!</h1></ng-template>
+      <div *ngIf="eventId; else noId" class="center-block">
+        <h1 class="bright">Event: {{ title }}</h1>
+        <h2 class="bright">ID: {{eventId}}</h2>
+        <h2 class="bright">Host: {{hostName}}</h2>
+        <h2 class="bright">Date: {{date}}</h2>
+        <h2 class="bright">Location: {{location}}</h2>
+
       </div>
+      <ng-template #noId
+        ><div class="center-block">
+          <h1 class="bright">No Event ID!</h1>
+        </div></ng-template
+      >
     </div>
   </div>
 </div>

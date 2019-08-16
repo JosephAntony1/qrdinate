@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 @Injectable({
   providedIn: "root"
 })
@@ -22,6 +22,18 @@ export class EventService {
       .post(`${this.uri}/event/add`, event, { responseType: "blob" })
       .subscribe(res => {
         console.log(res);
+      });
+  }
+
+  getEvent(id) {
+    let params = new HttpParams().set("id", id);
+
+    return this.http
+      .get(`${this.uri}/event-info/`, { params: params })
+      .subscribe(res => {
+        res["id"] = id;
+        console.log(res);
+        return res;
       });
   }
 }
