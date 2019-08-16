@@ -12,6 +12,7 @@ export class EventService {
     let event = {
       id: id,
       details: {
+        id: id
         title: title,
         location: location,
         date: date,
