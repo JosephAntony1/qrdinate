@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { EventInfoComponent } from './components/event-info/event-info.component';
 
-import {EventService} from './event.service'
+import {EventService} from './event.service';
+import { CreateEventComponent } from './components/create-event/create-event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    EventInfoComponent
+    EventInfoComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,
