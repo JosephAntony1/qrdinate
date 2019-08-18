@@ -10,13 +10,25 @@ import { EventInfoComponent } from './components/event-info/event-info.component
 
 import {EventService} from './event.service';
 import { CreateEventComponent } from './components/create-event/create-event.component';
+import { BasicDetailsComponent } from './components/basic-details/basic-details.component';
+import { GuestsComponent } from './components/guests/guests.component';
+import { TransportationComponent } from './components/transportation/transportation.component';
+import { CheckInComponent } from './components/check-in/check-in.component';
+import { AdministriviaComponent } from './components/administrivia/administrivia.component';
+import { ReviewComponent } from './components/review/review.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     EventInfoComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    BasicDetailsComponent,
+    GuestsComponent,
+    TransportationComponent,
+    CheckInComponent,
+    AdministriviaComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
