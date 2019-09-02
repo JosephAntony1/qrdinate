@@ -1,0 +1,29 @@
+<div class="tabs-vertical">
+  <div class="col s12 m12 l2">
+    <ul class="tabs">
+      <li class="tab" [class.selected]="getTabID(0)" (click)="setTabID(0)">
+        <a class="waves-effect waves-cyan">Basic Details</a>
+      </li>
+      <li class="tab" [class.selected]="getTabID(1)" (click)="setTabID(1)">
+        <a class="waves-effect waves-cyan">Guest Information</a>
+      </li>
+      <li class="tab" [class.selected]="getTabID(2)" (click)="setTabID(2)">
+        <a class="waves-effect waves-cyan">Transportation</a>
+      </li>
+      <li class="tab" [class.selected]="getTabID(3)" (click)="setTabID(3)">
+        <a class="waves-effect waves-cyan">Check In</a>
+      </li>
+      <li class="tab" [class.selected]="getTabID(4)" (click)="setTabID(4)">
+        <a class="waves-effect waves-cyan">Final Details</a>
+      </li>
+      <li class="tab" [class.selected]="getTabID(5)" (click)="setTabID(5)">
+        <a class="waves-effect waves-cyan">Review</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col s8 m9 l6">
+    <div id="appsDir" class="tab-content"></div>
+    <div id="emailDir" class="tab-content"></div>
+    <div id="codeDir" class="tab-content"></div>
+  </div>
+</div>

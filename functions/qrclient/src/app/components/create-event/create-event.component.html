@@ -1,2 +1,29 @@
-<p>create-event works!</p>
-<check-in></check-in>
+<div class="row">
+  <div class="col s3 accent-bg valign-wrapper" style="height: 100vh;">
+    <create-event-sidebar (tab)="setID($event)"></create-event-sidebar>
+  </div>
+
+  <div [hidden]="getTabID(0)" class="col s9">
+    <basic-details></basic-details>
+  </div>
+
+  <div [hidden]="getTabID(1)" class="col s9">
+    <guests></guests>
+  </div>
+
+  <div [hidden]="getTabID(2)" class="col s9">
+    <transportation></transportation>
+  </div>
+
+  <div [hidden]="getTabID(3)" class="col s9">
+    <check-in></check-in>
+  </div>
+
+  <div [hidden]="getTabID(4)" class="col s9">
+    <administrivia></administrivia>
+  </div>
+
+  <div [hidden]="getTabID(5)" class="col s9">
+    <review></review>
+  </div>
+</div>

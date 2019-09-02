@@ -1,23 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { BasicDetailsComponent } from '../basic-details/basic-details.component';
-import { GuestsComponent } from '../guests/guests.component';
-import { TransportationComponent } from '../transportation/transportation.component';
-import { CheckInComponent } from '../check-in/check-in.component';
-import { AdministriviaComponent } from '../administrivia/administrivia.component';
-import { ReviewComponent } from '../review/review.component';
+import { BasicDetailsComponent } from "../basic-details/basic-details.component";
+import { GuestsComponent } from "../guests/guests.component";
+import { TransportationComponent } from "../transportation/transportation.component";
+import { CheckInComponent } from "../check-in/check-in.component";
+import { AdministriviaComponent } from "../administrivia/administrivia.component";
+import { ReviewComponent } from "../review/review.component";
 
 @Component({
-  selector: 'app-create-event',
-  templateUrl: './create-event.component.html',
-  styleUrls: ['./create-event.component.css']
+  selector: "app-create-event",
+  templateUrl: "./create-event.component.html",
+  styleUrls: ["./create-event.component.css"]
 })
-
 export class CreateEventComponent implements OnInit {
+  id = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  setID(id: Number) {
+    this.id = id;
+    console.log(id);
   }
 
+  getTabID(val) {
+    return val !== this.id;
+  }
 }

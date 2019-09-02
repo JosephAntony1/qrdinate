@@ -18,6 +18,7 @@ import { TransportationComponent } from "./components/transportation/transportat
 import { CheckInComponent } from "./components/check-in/check-in.component";
 import { AdministriviaComponent } from "./components/administrivia/administrivia.component";
 import { ReviewComponent } from "./components/review/review.component";
+import { CreateEventSidebarComponent } from './components/create-event-sidebar/create-event-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ReviewComponent } from "./components/review/review.component";
     TransportationComponent,
     CheckInComponent,
     AdministriviaComponent,
-    ReviewComponent
+    ReviewComponent,
+    CreateEventSidebarComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [EventService],
