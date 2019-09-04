@@ -19,9 +19,8 @@ export class CreateEventComponent implements OnInit {
 
   ngOnInit() {}
 
-  setID(id: Number) {
+  setID(id: number) {
     this.id = id;
-    console.log(id);
   }
 
   getTabID(val) {
