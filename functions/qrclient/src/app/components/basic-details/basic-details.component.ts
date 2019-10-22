@@ -10,6 +10,7 @@ export class BasicDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
