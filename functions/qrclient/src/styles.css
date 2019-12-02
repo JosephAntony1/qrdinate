@@ -105,7 +105,7 @@ h1 {
   -webkit-transition: border-color 0.5s ease;
   transition: border-color 0.5s ease;
   border-right: 3px solid var(--primary);
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .tabs-vertical .tab a {
