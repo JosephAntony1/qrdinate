@@ -19,6 +19,7 @@ import { CheckInComponent } from "./components/check-in/check-in.component";
 import { AdministriviaComponent } from "./components/administrivia/administrivia.component";
 import { ReviewComponent } from "./components/review/review.component";
 import { CreateEventSidebarComponent } from './components/create-event-sidebar/create-event-sidebar.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { CreateEventSidebarComponent } from './components/create-event-sidebar/c
     ReviewComponent,
     CreateEventSidebarComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,
+    AgmCoreModule.forRoot({		apiKey: 'AIzaSyBq03Dr9Po2Au5ITdN2jKKvsu2PdkRJD8E'	})
+  ],
   providers: [EventService],
   bootstrap: [AppComponent]
 })

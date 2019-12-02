@@ -6,15 +6,22 @@
 <form class="" action="PUT THING HERE" method="post" display="inline-block">
 	<div class="row">
 		<div class="input-field col s12 m6 l6 ">
-			<input style="font-size:25px;" type="text" id="event" placeholder="Event Name" display="inline-block">
+			<input style="font-size:25px;" type="text" id="event" placeholder="KD Fall Crush 2019" display="inline-block">
 			<label for="event">Event Name</label>
 		</div>
 
-    <div class="input-field col s12 m5 l5 offset-l1 ">
-			<input style="font-size:25px;" type="text" id="event" placeholder="Host Name" display="inline-block">
+    <div class=" input-field col s12 m5 l5 offset-l1 ">
+			<input style="font-size:25px;" type="text" id="event" placeholder="Kappa Delta Lambda" display="inline-block">
 			<label for="event">Host Name</label>
 		</div>
 	</div>
+
+  <!-- this creates a google map on the page with the given lat/lng from -->
+  <!-- the component as the initial center of the map: -->
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+
 
 </form>
 </div>
