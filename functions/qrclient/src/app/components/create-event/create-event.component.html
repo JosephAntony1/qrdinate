@@ -1,32 +1,32 @@
-<div class="row">
+<div style="margin-bottom: 0px"class="row">
 
-  <div class="col center s5 m3  accent-bg l3 valign-wrapper" style="height: 100vh;">
-    <create-event-sidebar (tab)="setID($event)"></create-event-sidebar>
-  </div>
+	<div class="col center s5 m3  accent-bg l3 valign-wrapper" style="height: 100vh;">
+		<create-event-sidebar (tab)="setID($event)"></create-event-sidebar>
+	</div>
 
-  <div class="col s7 m9 l9">
-    <div [hidden]="getTabID(0)" class="col s9">
-      <basic-details></basic-details>
-    </div>
+	<div class="col s7 m9 l9">
+		<div [hidden]="getTabID(0)">
+			<basic-details></basic-details>
+		</div>
 
-    <div [hidden]="getTabID(1)" class="col s9">
-      <guests></guests>
-    </div>
+		<div [hidden]="getTabID(1)">
+			<guests></guests>
+		</div>
 
-    <div [hidden]="getTabID(2)" class="col s9">
-      <transportation></transportation>
-    </div>
+		<div [hidden]="getTabID(2)">
+			<transportation></transportation>
+		</div>
 
-    <div [hidden]="getTabID(3)" class="col s9">
-      <check-in></check-in>
-    </div>
+		<div [hidden]="getTabID(3)">
+			<check-in></check-in>
+		</div>
 
-    <div [hidden]="getTabID(4)" class="col s9">
-      <administrivia></administrivia>
-    </div>
+		<div [hidden]="getTabID(4)">
+			<administrivia></administrivia>
+		</div>
 
-    <div [hidden]="getTabID(5)" class="col s9">
-      <review></review>
-    </div>
-  </div>
+		<div [hidden]="getTabID(5)">
+			<review></review>
+		</div>
+	</div>
 </div>
