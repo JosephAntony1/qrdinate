@@ -21,6 +21,8 @@ import { ReviewComponent } from "./components/review/review.component";
 import { CreateEventSidebarComponent } from './components/create-event-sidebar/create-event-sidebar.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { config } from './../config.js';
+
 
 @NgModule({
 	declarations: [
