@@ -21,8 +21,7 @@ import { ReviewComponent } from "./components/review/review.component";
 import { CreateEventSidebarComponent } from './components/create-event-sidebar/create-event-sidebar.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { config } from './../config.js';
-
+import * as data from './../assets/config.json';
 
 @NgModule({
 	declarations: [
@@ -40,7 +39,7 @@ import { config } from './../config.js';
 	],
 	imports: [BrowserModule, AppRoutingModule, HttpClientModule,
 		AgmCoreModule.forRoot({
-			apiKey: config.API_KEY
+			apiKey: data.GMAPS_API
 		})
 
 	],
