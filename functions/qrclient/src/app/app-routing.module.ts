@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { EventInfoComponent } from './components/event-info/event-info.component';
 import { CreateEventComponent } from './components/create-event/create-event.component';
+import { AgmCoreModule } from '@agm/core';
 
 const routes: Routes = [
 	{ path: "home", component: HomepageComponent },

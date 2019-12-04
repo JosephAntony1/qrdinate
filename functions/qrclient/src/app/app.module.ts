@@ -19,26 +19,30 @@ import { CheckInComponent } from "./components/check-in/check-in.component";
 import { AdministriviaComponent } from "./components/administrivia/administrivia.component";
 import { ReviewComponent } from "./components/review/review.component";
 import { CreateEventSidebarComponent } from './components/create-event-sidebar/create-event-sidebar.component';
+
 import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomepageComponent,
-    EventInfoComponent,
-    CreateEventComponent,
-    BasicDetailsComponent,
-    GuestsComponent,
-    TransportationComponent,
-    CheckInComponent,
-    AdministriviaComponent,
-    ReviewComponent,
-    CreateEventSidebarComponent
-  ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,
-    AgmCoreModule.forRoot({		apiKey: 'AIzaSyBq03Dr9Po2Au5ITdN2jKKvsu2PdkRJD8E'	})
-  ],
-  providers: [EventService],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HomepageComponent,
+		EventInfoComponent,
+		CreateEventComponent,
+		BasicDetailsComponent,
+		GuestsComponent,
+		TransportationComponent,
+		CheckInComponent,
+		AdministriviaComponent,
+		ReviewComponent,
+		CreateEventSidebarComponent
+	],
+	imports: [BrowserModule, AppRoutingModule, HttpClientModule,
+		AgmCoreModule.forRoot({
+			apiKey: config.API_KEY
+		})
+
+	],
+	providers: [EventService],
+	bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
