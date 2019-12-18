@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from "@angular/common/http";
 
@@ -21,7 +22,7 @@ import { ReviewComponent } from "./components/review/review.component";
 import { CreateEventSidebarComponent } from './components/create-event-sidebar/create-event-sidebar.component';
 
 import { AgmCoreModule } from '@agm/core';
-import * as data from './../assets/config.json';
+import config from '../assets/config.json';
 
 @NgModule({
 	declarations: [
@@ -39,8 +40,10 @@ import * as data from './../assets/config.json';
 	],
 	imports: [BrowserModule, AppRoutingModule, HttpClientModule,
 		AgmCoreModule.forRoot({
-			apiKey: data.GMAPS_API
-		})
+			apiKey: config.GMAPS_API
+		}),
+		FormsModule,
+		ReactiveFormsModule,
 
 	],
 	providers: [EventService],

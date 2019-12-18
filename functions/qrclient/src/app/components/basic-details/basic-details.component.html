@@ -1,24 +1,29 @@
 <div style="padding: 2em">
 
-<h4>Let's start with some basic details</h4>
+<h4>Let's start with some basic details...</h4>
 
 <br><br>
-<form class="" action="PUT THING HERE" method="post" display="inline-block">
+<form [formGroup]="detailsForm" action="PUT THING HERE" method="post" display="inline-block">
 	<div class="row">
 		<div class="input-field col s12 m6 l6 ">
-			<input style="font-size:25px;" type="text" id="event" placeholder="KD Fall Crush 2019" display="inline-block">
+			<input formControlName="eventName" required style="font-size:25px;" type="text" id="event" placeholder="KD Fall Crush 2019" display="inline-block">
 			<label for="event">Event Name</label>
 		</div>
 
     <div class=" input-field col s12 m5 l5 offset-l1 ">
-			<input style="font-size:25px;" type="text" id="event" placeholder="Kappa Delta Lambda" display="inline-block">
+			<input required formControlName="hostName" style="font-size:25px;" type="text" id="event" placeholder="Kappa Delta Lambda" display="inline-block">
 			<label for="event">Host Name</label>
 		</div>
+
+		<div class=" input-field col s12 m12 l12">
+			<input required formControlName="Location" style="font-size:25px;" type="text" id="loc" placeholder="Willis Tower" display="inline-block">
+			<label for="loc">Location</label>
+		</div>
+
 	</div>
 
 	<agm-map [latitude]="lat" [longitude]="lng"></agm-map>
 
-
-
+	<button class="waves-effect waves-light btn-small next" [disabled]="detailsForm.invalid"><i class="material-icons right">arrow_forward</i>Next</button>
 </form>
 </div>
