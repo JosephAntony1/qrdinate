@@ -16,7 +16,6 @@ export class BasicDetailsComponent implements OnInit {
 	lng = -87.6298;
 	detailsForm: FormGroup;
 
-
 	ngOnInit() {
 		this.detailsForm = new FormGroup({
 			Location: new FormControl(),
