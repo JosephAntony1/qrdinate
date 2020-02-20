@@ -1,29 +1,56 @@
 <div style="padding: 2em">
 
-<h4>Let's start with some basic details...</h4>
+	<h4>Let's start with some basic details...</h4>
 
-<br><br>
-<form [formGroup]="detailsForm" novalidate display="inline-block">
-	<div class="row">
-		<div class="input-field col s12 m6 l6 ">
-			<input formControlName="eventName" required style="font-size:25px;" type="text" id="event" placeholder="KD Fall Crush 2019" display="inline-block">
-			<label for="event">Event Name</label>
-		</div>
+	<br><br>
+	<div *ngIf='loadComponent==false'>
+		<form [formGroup]="detailsForm" novalidate display="inline-block">
+			<div class="row">
+				<div class="input-field col s12 m6 l6 ">
+					<input formControlName="eventName" required style="font-size:25px;" type="text" id="event" placeholder="KD Fall Crush 2019" display="inline-block">
+					<label for="event">Event Name</label>
+				</div>
 
-    <div class=" input-field col s12 m5 l5 offset-l1 ">
-			<input required formControlName="hostName" style="font-size:25px;" type="text" id="event" placeholder="Kappa Delta Lambda" display="inline-block">
-			<label for="event">Host Name</label>
-		</div>
+				<div class=" input-field col s12 m5 l5 offset-l1 ">
+					<input required formControlName="hostName" style="font-size:25px;" type="text" id="event" placeholder="Kappa Delta Lambda" display="inline-block">
+					<label for="event">Host Name</label>
+				</div>
 
-		<div class=" input-field col s12 m12 l12">
-			<input required formControlName="Location" style="font-size:25px;" type="text" id="loc" placeholder="Willis Tower" display="inline-block">
-			<label for="loc">Location</label>
-		</div>
+				<div class=" input-field col s12 m12 l12">
+					<input required formControlName="Location" style="font-size:25px;" type="text" id="loc" placeholder="Willis Tower" display="inline-block">
+					<label for="loc">Location</label>
+				</div>
 
+			</div>
+
+			<agm-map [latitude]="lat" [longitude]="lng"></agm-map>
+
+			<button (click)="loadMyChildComponent();" class="waves-effect waves-light btn-small next" [disabled]="detailsForm.invalid"><i class="material-icons right">arrow_forward</i>Next</button>
+		</form>
 	</div>
 
-	<agm-map [latitude]="lat" [longitude]="lng"></agm-map>
+	<div *ngIf='loadComponent'>
+		<form [formGroup]="detailsDateForm" novalidate display="inline-block">
 
-	<button class="waves-effect waves-light btn-small next" [disabled]="detailsForm.invalid"><i class="material-icons right">arrow_forward</i>Next</button>
-</form>
+			<div class="row">
+				<div class="input-field col s4 m4 l4 datepicker">
+					<input required formControlName="eventDate" required style="font-size:25px;"  type="text" id="event" placeholder="KD Fall Crush 2019" display="inline-block">
+					<label for="event">Event Date</label>
+				</div>
+
+				<div class=" input-field col s4 m4 l4 ">
+					<input required formControlName="startTime" style="font-size:25px;" type="text" id="event" placeholder="Kappa Delta Lambda" display="inline-block">
+					<label for="event">Start Time</label>
+				</div>
+
+				<div class=" input-field col s4 m4 l4">
+					<input required formControlName="endTime" style="font-size:25px;" type="text" id="loc" placeholder="Willis Tower" display="inline-block">
+					<label for="loc">End Time</label>
+				</div>
+
+			</div>
+
+		</form>
+	</div>
+
 </div>

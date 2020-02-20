@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl,FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
 	selector: 'basic-details',
@@ -15,6 +15,11 @@ export class BasicDetailsComponent implements OnInit {
 	lat = 41.8781;
 	lng = -87.6298;
 	detailsForm: FormGroup;
+	private loadComponent = true;
+	loadMyChildComponent() {
+		this.loadComponent = true;
+	}
+
 
 	ngOnInit() {
 		this.detailsForm = new FormGroup({
@@ -22,5 +27,12 @@ export class BasicDetailsComponent implements OnInit {
 			eventName: new FormControl(),
 			hostName: new FormControl()
 		});
+
+		this.detailsDateForm = new FormGroup({
+			eventDate: new FormControl(),
+			startTime: new FormControl(),
+			endTime: new FormControl(),
+			lastDaySignUp: new FormControl()
+		})
 	}
 }
