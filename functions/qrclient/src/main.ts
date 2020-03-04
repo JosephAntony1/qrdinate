@@ -7,7 +7,6 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
 }
-var myapp = angular.module('myapp', ['angularMaterializeDatePicker']);
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));

@@ -15,7 +15,8 @@ export class BasicDetailsComponent implements OnInit {
 	lat = 41.8781;
 	lng = -87.6298;
 	detailsForm: FormGroup;
-	private loadComponent = true;
+	detailsDateForm: FormGroup;
+	private loadComponent = false;
 	loadMyChildComponent() {
 		this.loadComponent = true;
 	}

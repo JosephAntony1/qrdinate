@@ -33,7 +33,9 @@
 		<form [formGroup]="detailsDateForm" novalidate display="inline-block">
 
 			<div class="row">
-				<div class="input-field col s4 m4 l4 datepicker">
+				<div class="input-field col s4 m4 l4 ">
+
+
 					<input required formControlName="eventDate" required style="font-size:25px;"  type="text" id="event" placeholder="KD Fall Crush 2019" display="inline-block">
 					<label for="event">Event Date</label>
 				</div>
@@ -49,6 +51,9 @@
 				</div>
 
 			</div>
+			<button (click)="loadMyChildComponent();" class="waves-effect waves-light btn-small previous" ><i class="material-icons left">arrow_backward</i>Previous</button>
+
+			<button (click)="loadMyChildComponent();" class="waves-effect waves-light btn-small next" [disabled]="detailsDateForm.invalid"><i class="material-icons right">arrow_forward</i>Next</button>
 
 		</form>
 	</div>
