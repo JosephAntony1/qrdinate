@@ -16,10 +16,13 @@ export class BasicDetailsComponent implements OnInit {
 	lng = -87.6298;
 	detailsForm: FormGroup;
 	detailsDateForm: FormGroup;
-	private loadComponent = false;
-	loadMyChildComponent() {
-		this.loadComponent = true;
+	private loadComponent = 0;
+	loadChildComponent() {
+		this.loadComponent ++;
 	}
+	loadParentComponent() {
+		this.loadComponent --;
+	}	
 
 
 	ngOnInit() {

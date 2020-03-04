@@ -3,7 +3,7 @@
 	<h4>Let's start with some basic details...</h4>
 
 	<br><br>
-	<div *ngIf='loadComponent==false'>
+	<div *ngIf='loadComponent==0'>
 		<form [formGroup]="detailsForm" novalidate display="inline-block">
 			<div class="row">
 				<div class="input-field col s12 m6 l6 ">
@@ -25,11 +25,11 @@
 
 			<agm-map [latitude]="lat" [longitude]="lng"></agm-map>
 
-			<button (click)="loadMyChildComponent();" class="waves-effect waves-light btn-small next" [disabled]="detailsForm.invalid"><i class="material-icons right">arrow_forward</i>Next</button>
+			<button (click)="loadChildComponent();" class="waves-effect waves-light btn-small next" [disabled]="detailsForm.invalid"><i class="material-icons right">arrow_forward</i>Next</button>
 		</form>
 	</div>
 
-	<div *ngIf='loadComponent'>
+	<div *ngIf='loadComponent==1'>
 		<form [formGroup]="detailsDateForm" novalidate display="inline-block">
 
 			<div class="row">
@@ -51,9 +51,9 @@
 				</div>
 
 			</div>
-			<button (click)="loadMyChildComponent();" class="waves-effect waves-light btn-small previous" ><i class="material-icons left">arrow_backward</i>Previous</button>
+			<button (click)="loadParentComponent();" class="waves-effect waves-light btn-small previous" ><i class="material-icons left">arrow_backward</i>Previous</button>
 
-			<button (click)="loadMyChildComponent();" class="waves-effect waves-light btn-small next" [disabled]="detailsDateForm.invalid"><i class="material-icons right">arrow_forward</i>Next</button>
+			<button (click)="loadChildComponent();" class="waves-effect waves-light btn-small next" [disabled]="detailsDateForm.invalid"><i class="material-icons right">arrow_forward</i>Next</button>
 
 		</form>
 	</div>
